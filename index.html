@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novotec</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/layout_tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/layout_smartphone.css">
+    <script src="https://kit.fontawesome.com/fa6968a204.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container-grid conteudo-header">
+            <img class="logo" src="Imagens/logos_senai_branco.png" alt="Logo senai">
+            <nav id="menu-header" class="menu-header" >
+                <a href="#" title="Inicio da Página">Início</a>
+            <a href="#mouse">Sobre</a>
+            <a href="#endereço">Endereço</a>
+            <a class="botao"  href="mailto:exemplo@email.com">Contate-nos</a>
+            </nav>
+            <a class="menu-barras" href="javascript: void(0)" onclick="mostrarMenu()">
+            <i id="icone-menu" class="fas fa-bars" ></i>
+        </a>    
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <div class="container-grid conteudo-banner">
+                <div class="texto-banner">
+                    <h1>Cursos técnicos Senai</h1>
+                    <div class="linha-amarela"></div>
+                    <span class="titulo-senai">Senai Informática</span>
+                    <img class="mouse" id="mouse"  src="Imagens/mouse-down.png" alt="Imagem de um mouse">
+                </div>
+            </div>
+        </div>
+
+        <section class="sobre-projetos">
+            <div class="container-grid">
+                <h2>Sobre os Projetos</h2>
+                <div class="conteudo-sobre">
+                    <img class="imagem-sobre" src="Imagens/imagem-seção-sobre.jpg" alt="Homem explicando">
+                    <div class="texto-sobre">
+                        <span class="texto-participantes">Participantes</span>
+                        <h3 class="conteudo-sobreh3">Mais de 80 alunos organizados em 16 grupos</h3>
+                        <p class="texto-sobrep">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis at aspernatur iure aperiam perspiciatis amet! Cum reprehenderit, dolorem qui sit quos repudiandae! Alias, aut adipisci! Dolorum odio modi rem beatae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis at aspernatur iure aperiam perspiciatis amet! Cum reprehenderit, dolorem qui sit quos repudiandae! Alias, aut adipisci! Dolorum odio modi rem beatae! <p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info">
+            <div class="container-grid conteudo-info">
+                <div class="card-info">
+                    <h3 class="card-infoh3">Local</h3>
+                    <p class="card-infop">São Paulo</p>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-infoh3">Duração</h3>
+                    <p class="card-infop">90 dias</p>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-infoh3">Desafios</h3>
+                    <p class="card-infop">+30 Desafios</p>
+                </div>
+            </div>
+        </section>
+<section class="endereco" id="endereco">
+    <div class="container-grid conteudo-endereco">
+        <h2 >Endereço</h2>
+        <div class="texto-endereco">
+            <p class="texto-enderecop">Alameda Barão de Limeira, 539 Santa Cecília, São Paulo - SP Cep: 01202-001</p>
+        </div>
+        <a href="" target="_blank"><img class="mapa" src="Imagens/mapa.png" alt="Mapa mostrar"></a>
+    </div>
+</section>
+       
+    </main>
+
+    <footer>
+        <span>Copyright &copy; 2021 - Escola Senai de Informática</span>
+    </footer>
+    <script>
+        function mostrarMenu() {
+            var menu = document.getElementById("menu-header");
+            var icone = document.getElementById("icone-menu");
+
+            if(getComputedStyle(menu).display == 'none') {
+                menu.style.display = "flex";
+                icone.classList.remove("fa-bars");
+                icone.classList.add("fa-times");
+                // Mudar para times
+            } else{
+                menu.style.display = "none";
+                icone.classList.remove("fa-times");
+                icone.classList.add("fa-bars")
+                // Mudar para bars
+            }
+        }
+    </script>
+
+    
+    
+</body>
+</html>
